@@ -1,0 +1,35 @@
+{
+  "name": "jishu-cli",
+  "version": "0.0.1",
+  "description": "JiShu lowcode platform commender-line interface(CLI).",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jishu-lowcode/cli.git"
+  },
+  "author": "Allen Wong <xiaofuyesnew@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc --watch",
+    "build": "tsc"
+  },
+  "bin": {
+    "jishu": "./bin/index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/jishu-lowcode/cli/issues"
+  },
+  "homepage": "https://github.com/jishu-lowcode/cli#readme",
+  "dependencies": {
+    "chalk": "4.1.2",
+    "commander": "^8.3.0",
+    "inquirer": "^8.2.0",
+    "ora": "^6.0.1",
+    "progress": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.10",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.2"
+  }
+}

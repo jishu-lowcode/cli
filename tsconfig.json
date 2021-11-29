@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "sourceMap": false,
+    "declaration": false,
+    "outDir": "./lib/",
+    "rootDir": "./src/",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": false,
+    "removeComments": false,
+    "importHelpers": true,
+    "strict": true,
+    "lib": ["es2016", "dom"],
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
