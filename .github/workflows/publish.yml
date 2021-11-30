@@ -1,0 +1,31 @@
+name: publish
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-publish:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.23.3
+      - name: setup node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: https://registry.npmjs.org/
+          cache: 'pnpm'
+      - name: install dependencies
+        run: pnpm install
+      - name: build
+        run: pnpm build
+      - name: publish
+        run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
