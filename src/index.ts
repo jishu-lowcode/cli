@@ -10,6 +10,7 @@ program.parse(process.argv)
 
 const options = program.opts()
 
+
 if (options.version) {
     console.log(chalk.gray(`jishu-cli ${pkg.version}`))
 } 
