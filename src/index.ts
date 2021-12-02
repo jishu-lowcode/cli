@@ -4,13 +4,22 @@ import chalk from "chalk";
 
 const program = new Command();
 
-program.option('-v, --version', 'print version info')
+program.option("-v, --version", "print version info");
 
-program.parse(process.argv)
+program
+  .command("build")
+  .argument("[path]")
+  .description("build project")
+  .action(
+    (path) => {
+      console.log(path);
+    },
+  );
 
-const options = program.opts()
+program.parse(process.argv);
 
+const options = program.opts();
 
 if (options.version) {
-    console.log(chalk.gray(`jishu-cli ${pkg.version}`))
-} 
+  console.log(chalk.gray(`jishu-cli ${pkg.version}`));
+}
