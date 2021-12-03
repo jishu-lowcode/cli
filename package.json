@@ -1,8 +1,12 @@
 {
   "name": "jishu-cli",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "JiShu lowcode platform commender-line interface(CLI).",
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jishu-lowcode/cli.git"
@@ -20,9 +24,6 @@
     "url": "https://github.com/jishu-lowcode/cli/issues"
   },
   "homepage": "https://github.com/jishu-lowcode/cli#readme",
-  "engines": {
-    "node": ">=16.13.0"
-  },
   "dependencies": {
     "chalk": "4.1.2",
     "commander": "^8.3.0",
