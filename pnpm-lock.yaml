@@ -7,6 +7,7 @@ specifiers:
   inquirer: ^8.2.0
   ora: ^6.0.1
   progress: ^2.0.3
+  rollup: ^2.60.2
   tslib: ^2.3.1
   typescript: ^4.5.2
 
@@ -19,6 +20,7 @@ dependencies:
 
 devDependencies:
   '@types/node': 16.11.10
+  rollup: 2.60.2
   tslib: 2.3.1
   typescript: 4.5.2
 
@@ -173,6 +175,14 @@ packages:
     dependencies:
       escape-string-regexp: 1.0.5
     dev: false
+
+  /fsevents/2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /has-flag/4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
@@ -339,6 +349,14 @@ packages:
       onetime: 5.1.2
       signal-exit: 3.0.6
     dev: false
+
+  /rollup/2.60.2:
+    resolution: {integrity: sha512-1Bgjpq61sPjgoZzuiDSGvbI1tD91giZABgjCQBKM5aYLnzjq52GoDuWVwT/cm/MCxCMPU8gqQvkj8doQ5C8Oqw==}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
 
   /run-async/2.4.1:
     resolution: {integrity: sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==}
