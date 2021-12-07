@@ -1,10 +1,10 @@
 import pkg from "../package.json";
-import { Command } from "commander";
+import { createCommand } from "commander";
 import chalk from "chalk";
 
-const program = new Command();
+const program = createCommand();
 
-program.option("-v, --version", "print version info");
+program.version(chalk.gray(`jishu-cli ${pkg.version}`));
 
 program
   .command("build")
@@ -17,9 +17,3 @@ program
   );
 
 program.parse(process.argv);
-
-const options = program.opts();
-
-if (options.version) {
-  console.log(chalk.gray(`jishu-cli ${pkg.version}`));
-}
